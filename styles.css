@@ -196,7 +196,7 @@ header.on-dark:not(.scrolled) .logo span{
 @media (max-width: 900px){
   .hero{ 
     order: -1; 
-    max-height: 60vh; /* La foto no pasará del 60% del alto de la pantalla */
+    max-height: 50vh; /* La foto no pasará del 60% del alto de la pantalla */
     width: 100%;      /* Asegura que siga ocupando el ancho disponible */
   }
 }
