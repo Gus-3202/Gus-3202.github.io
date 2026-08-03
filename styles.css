@@ -142,7 +142,7 @@ header.on-dark:not(.scrolled) .logo span{
    tengas tus fotografías. La etiqueta de archivo (ej. DSC_0001) es solo decorativa. */
 .frame{
   position: relative;
-  border-radius: 2px;
+  border-radius: 16px;
   overflow: hidden;
   background:
     radial-gradient(rgba(23,20,15,.08) 1px, transparent 1.4px) 0 0/14px 14px,
@@ -191,11 +191,14 @@ header.on-dark:not(.scrolled) .logo span{
   font-size: 17px; color: var(--ink-muted); max-width: 46ch; margin-bottom: 34px;
 }
 .hero-actions{ display:flex; gap:14px; flex-wrap:wrap; }
-.hero-frame{ aspect-ratio: 4/5; }
+.hero-frame{ aspect-ratio: 2/3; }
 
 @media (max-width: 900px){
-  .hero{ grid-template-columns: 1fr; padding-top: 130px; }
-  .hero-frame{ aspect-ratio: 16/10; order:-1; }
+  .hero{ 
+    order: -1; 
+    max-height: 60vh; /* La foto no pasará del 60% del alto de la pantalla */
+    width: 100%;      /* Asegura que siga ocupando el ancho disponible */
+  }
 }
 
 /* ============ EXPLORA (home) ============ */
@@ -264,7 +267,11 @@ section{ padding: 100px 0; }
 
 @media (max-width: 860px){
   .about-grid{ grid-template-columns: 1fr; }
-  .about-frame{ position:static; aspect-ratio: 16/10; }
+  .about-frame{ 
+    position:static; 
+    max-height: 50vh; /* Puedes hacerlo más pequeño aquí si lo deseas */
+    width: 100%;
+  } 
 }
 
 /* ============ SERVICIOS ============ */
@@ -340,13 +347,16 @@ section{ padding: 100px 0; }
 .contact p.lead{ color: var(--dark-muted); max-width: 50ch; margin: 18px 0 44px; font-size: 16.5px; }
 .contact-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .contact-avatar{
-  width: 180px; height: 180px;
+  width: clamp(180px, 30vw, 320px); 
+  height: clamp(180px, 30vw, 320px);
+  border: 2px solid #ccc;
   border-radius: 50%;
   margin: 0 auto 40px;
+  object-fit: cover;
 }
 .contact-avatar::after{ display:none; }
 .contact-card .icon{
-  width: 30px; height: 30px;
+  width: 60px; height: 60px;
   color: var(--dark-text);
   margin-bottom: 16px;
   display: block;
