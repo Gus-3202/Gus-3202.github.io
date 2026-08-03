@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio — Gushermin</title>
+<meta name="description" content="Portafolio de Gustavo Hernández (Gushermin): retratos, bodas y eventos.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header id="site-header">
+  <nav class="wrap">
+    <a class="logo" href="index.html">GUSHER<span>MIN</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Inicio</a>
+      <a href="portafolio.html">Portafolio</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="paquetes.html">Paquetes</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+    <a class="btn btn-solid nav-cta" href="contacto.html">Escríbeme</a>
+  </nav>
+</header>
+
+<main>
+  <!-- ============ PORTAFOLIO ============ -->
+  <section class="wrap" style="padding-top: 168px;">
+    <div class="section-head reveal in">
+      <div class="eyebrow">Serie 001 – 010</div>
+      <h2>Portafolio</h2>
+    </div>
+
+    <div class="filters reveal in">
+      <button class="filter-btn active" data-filter="todos">Todos</button>
+      <button class="filter-btn" data-filter="retratos">Retratos</button>
+      <button class="filter-btn" data-filter="bodas">Bodas &amp; Eventos</button>
+    </div>
+
+    <!-- Cada .card es una foto. Cambia data-filter a "retratos" o "bodas" según
+         corresponda, y sustituye el .frame interno por tu <img>. -->
+    <div class="grid" id="portfolioGrid">
+      <div class="card reveal" data-filter="retratos">
+        <div class="frame ar-3-4" data-caption="Retrato — luz natural"><span class="frame-tag">Retratos</span><span class="frame-stamp">DSC_0001</span></div>
+        <div class="card-meta"><span>Retrato ambientado</span><span>001</span></div>
+      </div>
+      <div class="card reveal" data-filter="bodas">
+        <div class="frame ar-3-2" data-caption="Boda — ceremonia"><span class="frame-tag">Bodas</span><span class="frame-stamp">DSC_0002</span></div>
+        <div class="card-meta"><span>Ceremonia</span><span>002</span></div>
+      </div>
+      <div class="card reveal" data-filter="retratos">
+        <div class="frame ar-4-5" data-caption="Retrato — blanco y negro"><span class="frame-tag">Retratos</span><span class="frame-stamp">DSC_0003</span></div>
+        <div class="card-meta"><span>Estudio</span><span>003</span></div>
+      </div>
+      <div class="card reveal" data-filter="bodas">
+        <div class="frame ar-3-2" data-caption="Boda — recepción"><span class="frame-tag">Bodas</span><span class="frame-stamp">DSC_0004</span></div>
+        <div class="card-meta"><span>Recepción</span><span>004</span></div>
+      </div>
+      <div class="card reveal" data-filter="bodas">
+        <div class="frame ar-1-1" data-caption="Evento — detalle"><span class="frame-tag">Eventos</span><span class="frame-stamp">DSC_0005</span></div>
+        <div class="card-meta"><span>Detalles</span><span>005</span></div>
+      </div>
+      <div class="card reveal" data-filter="retratos">
+        <div class="frame ar-3-4" data-caption="Retrato — pareja"><span class="frame-tag">Retratos</span><span class="frame-stamp">DSC_0006</span></div>
+        <div class="card-meta"><span>Sesión de pareja</span><span>006</span></div>
+      </div>
+      <div class="card reveal" data-filter="retratos">
+        <div class="frame ar-4-5" data-caption="Retrato — exteriores"><span class="frame-tag">Retratos</span><span class="frame-stamp">DSC_0007</span></div>
+        <div class="card-meta"><span>Retrato al aire libre</span><span>007</span></div>
+      </div>
+      <div class="card reveal" data-filter="bodas">
+        <div class="frame ar-16-9" data-caption="Boda — primer baile"><span class="frame-tag">Bodas</span><span class="frame-stamp">DSC_0008</span></div>
+        <div class="card-meta"><span>Primer baile</span><span>008</span></div>
+      </div>
+      <div class="card reveal" data-filter="bodas">
+        <div class="frame ar-3-4" data-caption="Boda — preparativos"><span class="frame-tag">Bodas</span><span class="frame-stamp">DSC_0009</span></div>
+        <div class="card-meta"><span>Preparativos</span><span>009</span></div>
+      </div>
+      <div class="card reveal" data-filter="retratos">
+        <div class="frame ar-1-1" data-caption="Retrato — estudio"><span class="frame-tag">Retratos</span><span class="frame-stamp">DSC_0010</span></div>
+        <div class="card-meta"><span>Retrato de estudio</span><span>010</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Gustavo Hernández — Gushermin<br>All rights reserved.</p>
+    <div class="socials">
+      <a href="https://instagram.com/gushermin" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://wa.me/527296819259" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:gus.hermi0102@gmail.com">Correo</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
