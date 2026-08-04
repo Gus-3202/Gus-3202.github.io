@@ -195,9 +195,8 @@ header.on-dark:not(.scrolled) .logo span{
 
 @media (max-width: 900px){
   .hero{ 
-    order: -1; 
-    max-height: 50vh; /* La foto no pasará del 60% del alto de la pantalla */
-    width: 100%;      /* Asegura que siga ocupando el ancho disponible */
+    .hero{ grid-template-columns: 1fr; padding-top: 130px; }
+    .hero-frame{ order:-1; aspect-ratio: 2/3; } /* Agregamos el formato cuadrado */
   }
 }
 
@@ -234,8 +233,15 @@ section{ padding: 100px 0; }
 .grid{
   column-count: 3; column-gap: 22px;
 }
-.card{ break-inside: avoid; margin-bottom: 22px; }
-.card .frame{ margin-bottom: 12px; }
+.card { 
+  break-inside: avoid; 
+  page-break-inside: avoid; /* Ayuda a navegadores más antiguos */
+  display: inline-block;    /* ¡ESTA ES LA CLAVE! */
+  width: 100%;              /* Asegura que llene su columna */
+  margin-bottom: 22px; 
+  opacity: 1; 
+  transition: opacity .25s ease, transform .25s ease; 
+}
 
 /* Proporciones reutilizables para mezclar orientaciones de foto */
 .ar-3-4{ aspect-ratio: 3/4; }   /* vertical */
@@ -380,3 +386,56 @@ footer .socials a:hover{ color: #fff; }
 /* ============ SCROLL REVEAL ============ */
 .reveal{ opacity:0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.in{ opacity:1; transform: translateY(0); }
+
+/* ============ LIGHTBOX ============ */
+.lightbox {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 9999; /* Asegura que esté por encima de todo, incluso de tu menú */
+  left: 0; top: 0; width: 100%; height: 100%;
+  background-color: rgba(20, 28, 36, 0.95); /* Usa un tono oscuro similar a tu tema */
+  align-items: center; justify-content: center;
+}
+
+.lightbox.activo {
+  display: flex; /* Se muestra cuando tiene esta clase */
+}
+
+.lightbox-contenido {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain; /* Muestra la foto completa sin recortarla */
+  border-radius: 4px;
+}
+
+.lightbox-cerrar {
+  position: absolute;
+  top: 20px; right: 30px;
+  color: var(--paper);
+  font-size: 40px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.lightbox-cerrar:hover { color: var(--accent); }
+
+.lightbox-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 30px;
+  padding: 15px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.lightbox-btn:hover { background: var(--accent); }
+.lightbox-prev { left: 20px; }
+.lightbox-next { right: 20px; }
+
+/* Para que el cursor muestre que las fotos del portafolio se pueden clickear */
+.frame img { cursor: pointer; }

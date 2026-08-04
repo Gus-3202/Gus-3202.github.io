@@ -41,3 +41,63 @@ if (!prefersReducedMotion && 'IntersectionObserver' in window) {
 } else {
   document.querySelectorAll('.reveal, .frame').forEach(el => el.classList.add('in'));
 }
+
+//LightBox
+// Seleccionamos todas las imágenes de tu portafolio
+const imagenes = document.querySelectorAll('.frame img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+let indiceActual = 0;
+
+// 1. Abrir el lightbox al hacer clic en una imagen
+imagenes.forEach((img, index) => {
+  img.addEventListener('click', () => {
+    indiceActual = index;
+    mostrarImagen(indiceActual);
+    lightbox.classList.add('activo');
+  });
+});
+
+// 2. Función para mostrar la imagen correcta
+function mostrarImagen(index) {
+  if (index < 0) indiceActual = imagenes.length - 1;
+  else if (index >= imagenes.length) indiceActual = 0;
+  
+  lightboxImg.src = imagenes[indiceActual].src;
+}
+
+// 3. Botones de cerrar, siguiente y anterior
+document.querySelector('.lightbox-cerrar').addEventListener('click', () => {
+  lightbox.classList.remove('activo');
+});
+
+document.querySelector('.lightbox-prev').addEventListener('click', () => {
+  mostrarImagen(--indiceActual);
+});
+
+document.querySelector('.lightbox-next').addEventListener('click', () => {
+  mostrarImagen(++indiceActual);
+});
+
+// 4. Atajos de teclado (Esc, Flecha Izquierda, Flecha Derecha)
+document.addEventListener('keydown', (evento) => {
+  
+  // Primero verificamos si el lightbox está abierto para no interferir con la página normal
+  if (lightbox.classList.contains('activo')) {
+    
+    if (evento.key === 'Escape') {
+      // Cerrar el lightbox con la tecla ESC
+      lightbox.classList.remove('activo');
+    } 
+    else if (evento.key === 'ArrowLeft') {
+      // Ir a la foto anterior con la flecha izquierda
+      mostrarImagen(--indiceActual);
+    } 
+    else if (evento.key === 'ArrowRight') {
+      // Ir a la foto siguiente con la flecha derecha
+      mostrarImagen(++indiceActual);
+    }
+    
+  }
+});
