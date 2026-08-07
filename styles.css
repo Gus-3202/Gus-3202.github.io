@@ -248,13 +248,10 @@ Media query que se activa en pantallas de menos de 768px (móviles y tablets peq
     gap: 4px;        /* Reducimos la separación entre etiquetas */
   }
 
-  .tags-container .frame-tag {
-    font-size: 11px;       /* Letra más pequeña */
-    padding: 4px 8px;      /* Reducimos el recuadro de color alrededor de la letra */
-    opacity: 0.85;         /* Las hacemos 15% transparentes para que no pesen tanto visualmente */
-    backdrop-filter: blur(2px); /* Crea un ligero desenfoque en la foto debajo de la etiqueta */
+  /* ============ OCULTAR ETIQUETAS EN MÓVIL ============ */
+  .tags-container {
+    display: none !important;
   }
-
   /* Para ocultar las etiquetas extra en celular */
   .tags-container .frame-tag:not(:first-child) {
     display: none !important;
