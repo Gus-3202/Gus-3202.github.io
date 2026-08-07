@@ -1,6 +1,4 @@
-/* ============ TOKENS ============
-   Aquí vive todo el sistema de diseño. Si algún día quieres cambiar
-   el color de acento o el tono de fondo, solo edita estas variables. */
+/* ============ TOKENS ============. */
 :root{
   --paper: #EDEAE3;
   --paper-soft: #F4F1EA;
@@ -13,7 +11,7 @@
   --dark-text: #E9EDF0;
   --dark-muted: #8B98A3;
 
-  --font-display: 'Space Grotesk', sans-serif;
+  --font-display: 'Fraunces', serif;
   --font-body: 'Inter', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
 
@@ -100,10 +98,16 @@ header.scrolled{
 nav.wrap{ display:flex; align-items:center; justify-content:space-between; }
 .logo{ font-family: var(--font-display); font-weight:700; font-size: 19px; letter-spacing: -0.02em; }
 .logo span{ color: var(--accent); }
-/* Cuando el header flota sobre una sección de fondo oscuro (ej. Contacto),
-   aclaramos el logo para que no se pierda antes de hacer scroll. */
+/* Cuando el header flota sobre una sección de fondo oscuro (ej. el fondo de la sección "Contacto"),
+   se aclara el logo y el menú desplegable para que no se pierda antes de hacer scroll. */
 header.on-dark:not(.scrolled) .logo,
 header.on-dark:not(.scrolled) .logo span{
+  color: var(--dark-text);
+}
+header.on-dark:not(.scrolled) .menu-toggle span{
+  background: var(--dark-text);
+}
+header.on-dark:not(.scrolled) .nav-links a.active{
   color: var(--dark-text);
 }
 .nav-links{ display:flex; gap: 32px; align-items:center; }
@@ -138,8 +142,7 @@ header.on-dark:not(.scrolled) .logo span{
 }
 
 /* ============ FRAME PLACEHOLDER ============
-   Sustituye estos <div class="frame"> por <img src="tu-foto.jpg" alt="..."> cuando
-   tengas tus fotografías. La etiqueta de archivo (ej. DSC_0001) es solo decorativa. */
+   Los frames en donde irán colocadas las fotografías */
 .frame{
   position: relative;
   border-radius: 16px;
@@ -200,6 +203,49 @@ header.on-dark:not(.scrolled) .logo span{
   }
 }
 
+/* ============ HERO RESPONSIVO (MÓVIL) ============ 
+Media query que se activa en pantallas de menos de 768px (móviles y tablets pequeñas) */
+@media screen and (max-width: 768px) {
+  .hero {
+    display: flex !important; /* Asegura que usamos Flexbox en móvil */
+    
+    /* === OPCIÓN A: IMAGEN ARRIBA del texto en móvil === */
+    /* flex-direction: column-reverse; */
+    
+    /* === OPCIÓN B: TEXTO ARRIBA de la imagen (más común) === */
+    flex-direction: column;   /* Mantiene el orden del HTML: Texto y luego Imagen abajo */
+    
+    gap: 30px;                /* Espacio entre el texto y la imagen */
+    text-align: center;       /* Centra el texto en móvil */
+    padding: 120px 0 60px;    /* Ajusta el padding para móvil */
+    align-items: center;      /* Centra los elementos horizontalmente */
+  }
+  /* Ajustar el contenedor de texto */
+  .hero > .reveal {
+    width: 100%;              /* Asegura ancho completo en móvil */
+  }
+  .hero-actions {
+    justify-content: center;  /* Centra los botones horizontalmente en móvil */
+  }
+  /* Centrar el bloque de texto y darle espacio en los bordes */
+  .hero p.lead {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .hero .eyebrow {
+    justify-content: center;
+  }
+  /* Ajustar el wrapper de la imagen (.hero-frame) */
+  .hero-frame {
+    width: 100%;              /* Wrapper ocupa ancho completo */
+    max-width: 380px;         /* Limita el ancho máximo */
+    margin: 0 auto;           /* Centra el wrapper */
+    order: 1;                 /* Asegura que la imagen vaya después del texto en la columna */
+  }
+}
+
 /* ============ EXPLORA (home) ============ */
 .explore-grid{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
 .explore-card{
@@ -236,8 +282,8 @@ section{ padding: 100px 0; }
 .card { 
   break-inside: avoid; 
   page-break-inside: avoid; /* Ayuda a navegadores más antiguos */
-  display: inline-block;    /* ¡ESTA ES LA CLAVE! */
-  width: 100%;              /* Asegura que llene su columna */
+  display: inline-block;   
+  width: 100%;              /* Asegura que llenen las columna */
   margin-bottom: 22px; 
   opacity: 1; 
   transition: opacity .25s ease, transform .25s ease; 
@@ -255,7 +301,7 @@ section{ padding: 100px 0; }
 .card.hidden{ display:none; }
 
 @media (max-width: 900px){ .grid{ column-count: 2; } }
-@media (max-width: 560px){ .grid{ column-count: 1; } }
+@media (max-width: 560px){ .grid{ column-count: 2; } }
 
 /* ============ SOBRE MI ============ */
 .about{ background: var(--paper-soft); }
@@ -275,7 +321,7 @@ section{ padding: 100px 0; }
   .about-grid{ grid-template-columns: 1fr; }
   .about-frame{ 
     position:static; 
-    max-height: 50vh; /* Puedes hacerlo más pequeño aquí si lo deseas */
+    max-height: 50vh; /* Para ajustar el tamaño */
     width: 100%;
   } 
 }
@@ -391,14 +437,14 @@ footer .socials a:hover{ color: #fff; }
 .lightbox {
   display: none; /* Oculto por defecto */
   position: fixed;
-  z-index: 9999; /* Asegura que esté por encima de todo, incluso de tu menú */
+  z-index: 9999; /* Asegura que esté por encima de todo */
   left: 0; top: 0; width: 100%; height: 100%;
   background-color: rgba(20, 28, 36, 0.95); /* Usa un tono oscuro similar a tu tema */
   align-items: center; justify-content: center;
 }
 
 .lightbox.activo {
-  display: flex; /* Se muestra cuando tiene esta clase */
+  display: flex; 
 }
 
 .lightbox-contenido {
