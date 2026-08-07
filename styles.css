@@ -254,6 +254,11 @@ Media query que se activa en pantallas de menos de 768px (móviles y tablets peq
     opacity: 0.85;         /* Las hacemos 15% transparentes para que no pesen tanto visualmente */
     backdrop-filter: blur(2px); /* Crea un ligero desenfoque en la foto debajo de la etiqueta */
   }
+
+  /* Para ocultar las etiquetas extra en celular */
+  .tags-container .frame-tag:not(:first-child) {
+    display: none !important;
+  }
 }
 
 /* ============ EXPLORA (home) ============ */
