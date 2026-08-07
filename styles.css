@@ -240,6 +240,20 @@ Media query que se activa en pantallas de menos de 768px (móviles y tablets peq
     margin: 0 auto;           /* Centra el wrapper */
     order: 1;                 /* Asegura que la imagen vaya después del texto en la columna */
   }
+  
+  /* ============ ETIQUETAS MENOS INVASIVAS EN MÓVIL ============ */
+  .tags-container {
+    top: 10px;       /* Las acercamos más al borde de la foto */
+    left: 10px;
+    gap: 4px;        /* Reducimos la separación entre etiquetas */
+  }
+
+  .tags-container .frame-tag {
+    font-size: 11px;       /* Letra más pequeña */
+    padding: 4px 8px;      /* Reducimos el recuadro de color alrededor de la letra */
+    opacity: 0.85;         /* Las hacemos 15% transparentes para que no pesen tanto visualmente */
+    backdrop-filter: blur(2px); /* Crea un ligero desenfoque en la foto debajo de la etiqueta */
+  }
 }
 
 /* ============ EXPLORA (home) ============ */
