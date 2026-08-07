@@ -39,435 +39,631 @@
   <!-- ============ PORTAFOLIO ============ -->
   <section class="wrap" style="padding-top: 168px;">
     <div class="section-head reveal in">
-      <div class="eyebrow">Serie 001 – 035</div>
-      <h2>Portafolio</h2>
+      <div class="eyebrow entrar-suave">Serie 001 – 035</div>
+      <h2 class="entrar-suave retraso-1">Portafolio</h2>
     </div>
 
-    <div class="filters reveal in">
+    <div class="filters reveal in entrar-suave retraso-3">
       <button class="filter-btn active" data-filter="todos">Todos</button>
       <button class="filter-btn" data-filter="retratos">Retratos</button>
       <button class="filter-btn" data-filter="sociales">Sociales</button>
+      <button class="filter-btn" data-filter="bodas">Bodas</button>
+      <button class="filter-btn" data-filter="xvanos">XV Años</button>
+      <button class="filter-btn" data-filter="conciertos">Conciertos</button>
+      <button class="filter-btn" data-filter="mascotas">Mascotas</button>
+      <button class="filter-btn" data-filter="newborn">Newborn &amp Maternidad</button>
+      <button class="filter-btn" data-filter="estudio">Foto de Estudio</button>
       <button class="filter-btn" data-filter="otros">Otros</button>
     </div>
 
     <!-- Cada .card es una foto. Cambia data-filter a "retratos" o "bodas" según
          corresponda, y sustituye el .frame interno por tu <img>. -->
-    <div class="grid" id="portfolioGrid">
+    <div class="grid entrar-suave retraso-4" id="portfolioGrid">
+
       <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-3-4" data-caption="Retratos — reemplaza con tu foto">
+        <div class="frame ar-3-4">
           <img src="images/DSC4.jpg" alt="Retrato 01">
           <span class="frame-tag">Retratos</span>
           <span class="frame-stamp">RETRATO_01</span>
         </div>
         <div class="card-meta"><span>Retrato 01</span><span>001</span></div>
       </div>
-      <div class="card reveal" data-filter="bodas">
-        <div class="frame ar-4-5" data-caption="Bodas — reemplaza con tu foto">
-          <img src="images/DSC6.jpg" alt="Boda 01">
-          <span class="frame-tag">Bodas</span>
-          <span class="frame-stamp">BODA_01</span>
-        </div>
-        <div class="card-meta"><span>Boda 01</span><span>002</span></div>
-      </div>
+
       <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-3-2" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC11.jpg" alt="Retrato 02">
+        <div class="frame ar-4-5">
+          <img src="images/DSC6.jpg" alt="Retrato 02">
           <span class="frame-tag">Retratos</span>
           <span class="frame-stamp">RETRATO_02</span>
         </div>
-        <div class="card-meta"><span>Retrato 02</span><span>003</span></div>
+        <div class="card-meta"><span>Retrato 02</span><span>002</span></div>
       </div>
-      <div class="card reveal" data-filter="bodas">
-        <div class="frame ar-3-2" data-caption="Bodas — reemplaza con tu foto">
-          <img src="images/DSC11B.jpg" alt="Boda 02">
-          <span class="frame-tag">Bodas</span>
-          <span class="frame-stamp">BODA_02</span>
+
+      <div class="card reveal" data-filter="bodas sociales">
+        <div class="frame ar-3-2">
+          <img src="images/DSC11.jpg" alt="Boda 01">
+          <div class="tags-container">
+            <span class="frame-tag">Bodas</span>
+            <span class="frame-tag">Sociales</span>
+          </div>
+          <span class="frame-stamp">BODA_01</span>
         </div>
-        <div class="card-meta"><span>Boda 02</span><span>004</span></div>
+        <div class="card-meta"><span>Boda 01</span><span>003</span></div>
       </div>
-      <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-4-5" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC10.jpg" alt="Retrato 03">
-          <span class="frame-tag">Retratos</span>
-          <span class="frame-stamp">RETRATO_03</span>
-        </div>
-        <div class="card-meta"><span>Retrato 03</span><span>005</span></div>
-      </div>
-      <div class="card reveal" data-filter="bodas">
-        <div class="frame ar-16-9" data-caption="Bodas — reemplaza con tu foto">
-          <img src="images/DSC18.jpg" alt="Boda 03">
-          <span class="frame-tag">Bodas</span>
+
+      <div class="card reveal" data-filter="bodas sociales otros">
+        <div class="frame ar-3-2">
+          <img src="images/DSC11B.jpg" alt="Boda 03">
+          <div class="tags-container">
+            <span class="frame-tag">Bodas</span>
+            <span class="frame-tag">Sociales</span>
+            <span class="frame-tag">Otros</span>
+          </div>
           <span class="frame-stamp">BODA_03</span>
         </div>
-        <div class="card-meta"><span>Boda 03</span><span>006</span></div>
+        <div class="card-meta"><span>Boda 03</span><span>004</span></div>
       </div>
-      <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-4-5" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC13.jpg" alt="Retrato 04">
-          <span class="frame-tag">Retratos</span>
-          <span class="frame-stamp">RETRATO_04</span>
-        </div>
-        <div class="card-meta"><span>Retrato 04</span><span>007</span></div>
-      </div>
-      <div class="card reveal" data-filter="bodas">
-        <div class="frame ar-3-4" data-caption="Bodas — reemplaza con tu foto">
-          <img src="images/DSC20.jpg" alt="Boda 04">
-          <span class="frame-tag">Bodas</span>
+
+      <div class="card reveal" data-filter="bodas sociales">
+        <div class="frame ar-4-5">
+          <img src="images/DSC10.jpg" alt="Boda 04">
+          <div class="tags-container">
+            <span class="frame-tag">Bodas</span>
+            <span class="frame-tag">Sociales</span>
+          </div>
           <span class="frame-stamp">BODA_04</span>
         </div>
-        <div class="card-meta"><span>Boda 04</span><span>008</span></div>
+        <div class="card-meta"><span>Boda 04</span><span>005</span></div>
       </div>
-      <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-4-5" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC21.jpg" alt="Retrato 05">
-          <span class="frame-tag">Retratos</span>
+      
+      <div class="card reveal" data-filter="xvanos sociales">
+        <div class="frame ar-16-9">
+          <img src="images/DSC18.jpg" alt="XV Años 01">
+          <span class="frame-tag">XV Años</span>
+          <span class="frame-stamp">XV_01</span>
+        </div>
+        <div class="card-meta"><span>XV Años 01</span><span>006</span></div>
+      </div>
+
+      <div class="card reveal" data-filter="xvanos sociales retratos">
+        <div class="frame ar-4-5">
+          <img src="images/DSC13.jpg" alt="XV Años 02">
+          <div class="tags-container">
+            <span class="frame-tag">XV Años</span>
+            <span class="frame-tag">Sociales</span>
+            <span class="frame-tag">Retratos</span>
+          </div>
+          <span class="frame-stamp">XV_02</span>
+        </div>
+        <div class="card-meta"><span>XV Años 02</span><span>007</span></div>
+      </div>
+
+      <div class="card reveal" data-filter="retratos otros">
+        <div class="frame ar-3-4">
+          <img src="images/DSC20.jpg" alt="Retrato 03">
+          <div class="tags-container">
+            <span class="frame-tag">Otros</span>
+            <span class="frame-tag">Retratos</span>
+          </div>
+          <span class="frame-stamp">RETRATO_03</span>
+        </div>
+        <div class="card-meta"><span>Retrato 03</span><span>008</span></div>
+      </div>
+
+      <div class="card reveal" data-filter="retratos otros">
+        <div class="frame ar-4-5">
+          <img src="images/DSC21.jpg" alt="Retrato 04">
+          <div class="tags-container">
+            <span class="frame-tag">Otros</span>
+            <span class="frame-tag">Retratos</span>
+          </div>
+          <span class="frame-stamp">RETRATO_04</span>
+        </div>
+        <div class="card-meta"><span>Retrato 04</span><span>009</span></div>
+      </div>
+
+      <div class="card reveal" data-filter="retratos otros">
+        <div class="frame ar-1-1">
+          <img src="images/DSC22.jpg" alt="Retrato 05">
+          <div class="tags-container">
+            <span class="frame-tag">Otros</span>
+            <span class="frame-tag">Retratos</span>
+          </div>
           <span class="frame-stamp">RETRATO_05</span>
         </div>
-        <div class="card-meta"><span>Retrato 05</span><span>009</span></div>
+        <div class="card-meta"><span>Retrato 05</span><span>010</span></div>
       </div>
-      <div class="card reveal" data-filter="bodas">
-        <div class="frame ar-1-1" data-caption="Bodas — reemplaza con tu foto">
-          <img src="images/DSC22.jpg" alt="Boda 05">
-          <span class="frame-tag">Bodas</span>
-          <span class="frame-stamp">BODA_05</span>
+
+      <div class="card reveal" data-filter="conciertos retratos">
+        <div class="frame ar-3-2">
+          <img src="images/DSC48.jpg" alt="Concierto 01">
+          <div class="tags-container">
+            <span class="frame-tag">Conciertos</span>
+            <span class="frame-tag">Retratos</span>
+          </div>
+          <span class="frame-stamp">CONCIERTO_01</span>
         </div>
-        <div class="card-meta"><span>Boda 05</span><span>010</span></div>
+        <div class="card-meta"><span>Concierto 01</span><span>011</span></div>
       </div>
-      <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-3-2" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC48.jpg" alt="Retrato 06">
-          <span class="frame-tag">Retratos</span>
+
+      <div class="card reveal" data-filter="conciertos retratos">
+        <div class="frame ar-3-2">
+          <img src="images/DSC46.jpg" alt="Concierto 02">
+          <div class="tags-container">
+            <span class="frame-tag">Conciertos</span>
+            <span class="frame-tag">Retratos</span>
+          </div>
+          <span class="frame-stamp">CONCIERTO_02</span>
+        </div>
+        <div class="card-meta"><span>Concierto 02</span><span>012</span></div>
+      </div>
+
+      <div class="card reveal" data-filter="conciertos retratos">
+        <div class="frame ar-4-5">
+          <img src="images/DSC45.jpg" alt="Concierto 03">
+          <div class="tags-container">
+            <span class="frame-tag">Conciertos</span>
+            <span class="frame-tag">Retratos</span>
+          </div>
+          <span class="frame-stamp">CONCIERTO_03</span>
+        </div>
+        <div class="card-meta"><span>Concierto 03</span><span>013</span></div>
+      </div>
+
+      <div class="card reveal" data-filter="conciertos retratos">
+        <div class="frame ar-4-5">
+          <img src="images/DSC47.png" alt="Concierto 04">
+          <div class="tags-container">
+            <span class="frame-tag">Conciertos</span>
+            <span class="frame-tag">Retratos</span>
+          </div>
+          <span class="frame-stamp">CONCIERTO_04</span>
+        </div>
+        <div class="card-meta"><span>Concierto 04</span><span>014</span></div>
+      </div>
+
+      <div class="card reveal" data-filter="retratos otros">
+        <div class="frame ar-3-2">
+          <img src="images/DSC29.jpg" alt="Retrato 06">
+          <div class="tags-container">
+            <span class="frame-tag">Retratos</span>
+            <span class="frame-tag">Otros</span>
+          </div>
           <span class="frame-stamp">RETRATO_06</span>
         </div>
-        <div class="card-meta"><span>Retrato 06</span><span>011</span></div>
+        <div class="card-meta"><span>Retrato 06</span><span>015</span></div>
       </div>
-      <div class="card reveal" data-filter="bodas">
-        <div class="frame ar-3-2" data-caption="Bodas — reemplaza con tu foto">
-          <img src="images/DSC46.jpg" alt="Boda 06">
-          <span class="frame-tag">Bodas</span>
-          <span class="frame-stamp">BODA_06</span>
-        </div>
-        <div class="card-meta"><span>Boda 06</span><span>012</span></div>
-      </div>
-      <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-4-5" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC45.jpg" alt="Retrato 18">
-          <span class="frame-tag">Retratos</span>
-          <span class="frame-stamp">RETRATO_18</span>
-        </div>
-        <div class="card-meta"><span>Retrato 18</span><span>035</span></div>
-      </div>
-      <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-4-5" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC47.png" alt="Retrato 18">
-          <span class="frame-tag">Retratos</span>
-          <span class="frame-stamp">RETRATO_18</span>
-        </div>
-        <div class="card-meta"><span>Retrato 18</span><span>035</span></div>
-      </div>
-      <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-3-2" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC29.jpg" alt="Retrato 18">
-          <span class="frame-tag">Retratos</span>
-          <span class="frame-stamp">RETRATO_18</span>
-        </div>
-        <div class="card-meta"><span>Retrato 18</span><span>035</span></div>
-      </div>
-      <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-3-4" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC35.jpg" alt="Retrato 18">
-          <span class="frame-tag">Retratos</span>
-          <span class="frame-stamp">RETRATO_18</span>
-        </div>
-        <div class="card-meta"><span>Retrato 18</span><span>035</span></div>
-      </div>
-      <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-3-2" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC41.jpg" alt="Retrato 07">
-          <span class="frame-tag">Retratos</span>
+
+      <div class="card reveal" data-filter="retratos estudio">
+        <div class="frame ar-3-4">
+          <img src="images/DSC35.jpg" alt="Retrato 07">
+          <div class="tags-container">
+            <span class="frame-tag">Retratos</span>
+            <span class="frame-tag">Estudio</span>
+          </div>
           <span class="frame-stamp">RETRATO_07</span>
         </div>
-        <div class="card-meta"><span>Retrato 07</span><span>013</span></div>
+        <div class="card-meta"><span>Retrato 07</span><span>016</span></div>
       </div>
-      <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-4-5" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC38.jpg" alt="Retrato 07">
-          <span class="frame-tag">Retratos</span>
-          <span class="frame-stamp">RETRATO_07</span>
+
+      <div class="card reveal" data-filter="newborn retratos estudio">
+        <div class="frame ar-3-2">
+          <img src="images/DSC41.jpg" alt="Newborn 01">
+          <div class="tags-container">
+            <span class="frame-tag">Newborn</span>
+            <span class="frame-tag">Retratos</span>
+            <span class="frame-tag">Estudio</span>
+          </div>
+          <span class="frame-stamp">NEWBORN_01</span>
         </div>
-        <div class="card-meta"><span>Retrato 07</span><span>013</span></div>
+        <div class="card-meta"><span>Newborn 01</span><span>017</span></div>
       </div>
-      <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-3-2" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC1.jpg" alt="Retrato 07">
-          <span class="frame-tag">Retratos</span>
-          <span class="frame-stamp">RETRATO_07</span>
+
+      <div class="card reveal" data-filter="newborn retratos estudio">
+        <div class="frame ar-4-5">
+          <img src="images/DSC38.jpg" alt="Newborn 02">
+          <div class="tags-container">
+            <span class="frame-tag">Newborn</span>
+            <span class="frame-tag">Retratos</span>
+            <span class="frame-tag">Estudio</span>
+          </div>
+          <span class="frame-stamp">NEWBORN_02</span>
         </div>
-        <div class="card-meta"><span>Retrato 07</span><span>013</span></div>
+        <div class="card-meta"><span>Newborn 02</span><span>018</span></div>
       </div>
-      <div class="card reveal" data-filter="bodas">
-        <div class="frame ar-4-5" data-caption="Bodas — reemplaza con tu foto">
-          <img src="images/DSC2.jpg" alt="Boda 07">
-          <span class="frame-tag">Bodas</span>
-          <span class="frame-stamp">BODA_07</span>
-        </div>
-        <div class="card-meta"><span>Boda 07</span><span>014</span></div>
-      </div>
+
       <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-16-9" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC3.jpg" alt="Retrato 08">
+        <div class="frame ar-3-2">
+          <img src="images/DSC1.jpg" alt="Retrato 08">
           <span class="frame-tag">Retratos</span>
           <span class="frame-stamp">RETRATO_08</span>
         </div>
-        <div class="card-meta"><span>Retrato 08</span><span>015</span></div>
+        <div class="card-meta"><span>Retrato 08</span><span>019</span></div>
       </div>
-      <div class="card reveal" data-filter="bodas">
-        <div class="frame ar-3-2" data-caption="Bodas — reemplaza con tu foto">
-          <img src="images/DSC7.jpg" alt="Boda 08">
-          <span class="frame-tag">Bodas</span>
-          <span class="frame-stamp">BODA_08</span>
-        </div>
-        <div class="card-meta"><span>Boda 08</span><span>016</span></div>
-      </div>
+
       <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-3-2" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC0361.jpg" alt="Retrato 09">
+        <div class="frame ar-4-5">
+          <img src="images/DSC2.jpg" alt="Retrato 09">
           <span class="frame-tag">Retratos</span>
           <span class="frame-stamp">RETRATO_09</span>
         </div>
-        <div class="card-meta"><span>Retrato 09</span><span>017</span></div>
+        <div class="card-meta"><span>Retrato 09</span><span>020</span></div>
       </div>
+
       <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-4-5" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC8.jpg" alt="Retrato 09">
-          <span class="frame-tag">Retratos</span>
-          <span class="frame-stamp">RETRATO_09</span>
-        </div>
-        <div class="card-meta"><span>Retrato 09</span><span>017</span></div>
-      </div>
-      <div class="card reveal" data-filter="bodas">
-        <div class="frame ar-3-4" data-caption="Bodas — reemplaza con tu foto">
-          <img src="images/DSC14.jpg" alt="Boda 09">
-          <span class="frame-tag">Bodas</span>
-          <span class="frame-stamp">BODA_09</span>
-        </div>
-        <div class="card-meta"><span>Boda 09</span><span>018</span></div>
-      </div>
-      <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-4-5" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC17.jpg" alt="Retrato 10">
+        <div class="frame ar-16-9">
+          <img src="images/DSC3.jpg" alt="Retrato 10">
           <span class="frame-tag">Retratos</span>
           <span class="frame-stamp">RETRATO_10</span>
         </div>
-        <div class="card-meta"><span>Retrato 10</span><span>019</span></div>
+        <div class="card-meta"><span>Retrato 10</span><span>021</span></div>
       </div>
-      <div class="card reveal" data-filter="bodas">
-        <div class="frame ar-3-4" data-caption="Bodas — reemplaza con tu foto">
-          <img src="images/DSC19.jpg" alt="Boda 10">
-          <span class="frame-tag">Bodas</span>
-          <span class="frame-stamp">BODA_10</span>
-        </div>
-        <div class="card-meta"><span>Boda 10</span><span>020</span></div>
-      </div>
+
       <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-3-4" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC28.jpg" alt="Retrato 11">
+        <div class="frame ar-3-2">
+          <img src="images/DSC7.jpg" alt="Retrato 11">
           <span class="frame-tag">Retratos</span>
           <span class="frame-stamp">RETRATO_11</span>
         </div>
-        <div class="card-meta"><span>Retrato 11</span><span>021</span></div>
+        <div class="card-meta"><span>Retrato 11</span><span>022</span></div>
       </div>
-      <div class="card reveal" data-filter="bodas">
-        <div class="frame ar-4-5" data-caption="Bodas — reemplaza con tu foto">
-          <img src="images/DSC23.jpg" alt="Boda 11">
-          <span class="frame-tag">Bodas</span>
-          <span class="frame-stamp">BODA_11</span>
+
+      <div class="card reveal" data-filter="bodas sociales">
+        <div class="frame ar-3-2">
+          <img src="images/DSC0361.jpg" alt="Boda 05">
+          <div class="tags-container">
+            <span class="frame-tag">Bodas</span>
+            <span class="frame-tag">Sociales</span>
+          </div>
+          <span class="frame-stamp">BODA_05</span>
         </div>
-        <div class="card-meta"><span>Boda 11</span><span>022</span></div>
+        <div class="card-meta"><span>Boda 05</span><span>023</span></div>
       </div>
+
+      <div class="card reveal" data-filter="bodas retratos">
+        <div class="frame ar-4-5">
+          <img src="images/DSC8.jpg" alt="Boda 06">
+          <div class="tags-container">
+            <span class="frame-tag">Bodas</span>
+            <span class="frame-tag">Retratos</span>
+          </div>
+          <span class="frame-stamp">BODA_06</span>
+        </div>
+        <div class="card-meta"><span>Boda 06</span><span>024</span></div>
+      </div>
+
+      <div class="card reveal" data-filter="xvanos sociales">
+        <div class="frame ar-3-4">
+          <img src="images/DSC14.jpg" alt="XV Años 03">
+          <div class="tags-container">
+            <span class="frame-tag">XV Años</span>
+            <span class="frame-tag">Sociales</span>
+          </div>
+          <span class="frame-stamp">XV_AÑOS_03</span>
+        </div>
+        <div class="card-meta"><span>XV Años 03</span><span>025</span></div>
+      </div>
+
+      <div class="card reveal" data-filter="xvanos sociales">
+        <div class="frame ar-4-5">
+          <img src="images/DSC17.jpg" alt="XV Años 04">
+          <div class="tags-container">
+            <span class="frame-tag">XV Años</span>
+            <span class="frame-tag">Sociales</span>
+          </div>
+          <span class="frame-stamp">XV_AÑOS_04</span>
+        </div>
+        <div class="card-meta"><span>XV Años 04</span><span>026</span></div>
+      </div>
+
+      <div class="card reveal" data-filter="xvanos sociales">
+        <div class="frame ar-3-4">
+          <img src="images/DSC19.jpg" alt="XV Años 05">
+          <div class="tags-container">
+            <span class="frame-tag">XV Años</span>
+            <span class="frame-tag">Sociales</span>
+          </div>
+          <span class="frame-stamp">XV_AÑOS_05</span>
+        </div>
+        <div class="card-meta"><span>XV Años 05</span><span>027</span></div>
+      </div>
+
+      <div class="card reveal" data-filter="xvanos sociales">
+        <div class="frame ar-3-4">
+          <img src="images/DSC28.jpg" alt="XV Años 06">
+          <div class="tags-container">
+            <span class="frame-tag">XV Años</span>
+            <span class="frame-tag">Sociales</span>
+          </div>
+          <span class="frame-stamp">XV_AÑOS_06</span>
+        </div>
+        <div class="card-meta"><span>XV Años 06</span><span>028</span></div>
+      </div>
+
       <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-3-4" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC24.jpg" alt="Retrato 12">
+        <div class="frame ar-4-5">
+          <img src="images/DSC23.jpg" alt="Retrato 12">
           <span class="frame-tag">Retratos</span>
           <span class="frame-stamp">RETRATO_12</span>
         </div>
-        <div class="card-meta"><span>Retrato 12</span><span>023</span></div>
+        <div class="card-meta"><span>Retrato 12</span><span>029</span></div>
       </div>
-      <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-4-5" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC36.jpg" alt="Retrato 18">
-          <span class="frame-tag">Retratos</span>
-          <span class="frame-stamp">RETRATO_18</span>
+
+      <div class="card reveal" data-filter="retratos otros">
+        <div class="frame ar-3-4">
+          <img src="images/DSC24.jpg" alt="Retrato 13">
+          <div class="tags-container">
+            <span class="frame-tag">Retratos</span>
+            <span class="frame-tag">Otros</span>
+          </div>
         </div>
-        <div class="card-meta"><span>Retrato 18</span><span>035</span></div>
+        <div class="card-meta"><span>Retrato 13</span><span>030</span></div>
       </div>
-      <div class="card reveal" data-filter="bodas">
-        <div class="frame ar-4-5" data-caption="Bodas — reemplaza con tu foto">
-          <img src="images/DSC37.jpg" alt="Boda 12">
-          <span class="frame-tag">Bodas</span>
-          <span class="frame-stamp">BODA_12</span>
+
+      <div class="card reveal" data-filter="mascotas retratos">
+        <div class="frame ar-4-5">
+          <img src="images/DSC36.jpg" alt="Mascota 01">
+          <div class="tags-container">
+            <span class="frame-tag">Mascotas</span>
+            <span class="frame-tag">Retratos</span>
+          </div>
+          <span class="frame-stamp">Mascota_01</span>
         </div>
-        <div class="card-meta"><span>Boda 12</span><span>024</span></div>
+        <div class="card-meta"><span>Mascota 01</span><span>031</span></div>
       </div>
-      <div class="card reveal" data-filter="bodas">
-        <div class="frame ar-4-5" data-caption="Bodas — reemplaza con tu foto">
-          <img src="images/DSC34.jpg" alt="Boda 12">
-          <span class="frame-tag">Bodas</span>
-          <span class="frame-stamp">BODA_12</span>
+
+      <div class="card reveal" data-filter="mascotas retratos">
+        <div class="frame ar-4-5">
+          <img src="images/DSC37.jpg" alt="Mascota 02">
+          <div class="tags-container">
+            <span class="frame-tag">Mascotas</span>
+            <span class="frame-tag">Retratos</span>
+          </div>
+          <span class="frame-stamp">Mascota_02</span>
         </div>
-        <div class="card-meta"><span>Boda 12</span><span>024</span></div>
+        <div class="card-meta"><span>Mascota 02</span><span>032</span></div>
       </div>
-      <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-3-2" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC40.jpg" alt="Retrato 07">
-          <span class="frame-tag">Retratos</span>
-          <span class="frame-stamp">RETRATO_07</span>
-        </div>
-        <div class="card-meta"><span>Retrato 07</span><span>013</span></div>
-      </div>
-      <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-4-5" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC42.jpg" alt="Retrato 07">
-          <span class="frame-tag">Retratos</span>
-          <span class="frame-stamp">RETRATO_07</span>
-        </div>
-        <div class="card-meta"><span>Retrato 07</span><span>013</span></div>
-      </div>
-      <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-4-5" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC5.jpg" alt="Retrato 13">
-          <span class="frame-tag">Retratos</span>
-          <span class="frame-stamp">RETRATO_13</span>
-        </div>
-        <div class="card-meta"><span>Retrato 13</span><span>025</span></div>
-      </div>
-      <div class="card reveal" data-filter="bodas">
-        <div class="frame ar-3-4" data-caption="Bodas — reemplaza con tu foto">
-          <img src="images/DSC44.jpg" alt="Boda 13">
-          <span class="frame-tag">Bodas</span>
-          <span class="frame-stamp">BODA_13</span>
-        </div>
-        <div class="card-meta"><span>Boda 13</span><span>026</span></div>
-      </div>
-      <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-3-2" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC11A.jpg" alt="Retrato 14">
-          <span class="frame-tag">Retratos</span>
+
+      <div class="card reveal" data-filter="retratos estudio">
+        <div class="frame ar-4-5">
+          <img src="images/DSC34.jpg" alt="Retrato 14">
+          <div class="tags-container">
+            <span class="frame-tag">Retratos</span>
+            <span class="frame-tag">Estudio</span>
+          </div>
           <span class="frame-stamp">RETRATO_14</span>
         </div>
-        <div class="card-meta"><span>Retrato 14</span><span>027</span></div>
+        <div class="card-meta"><span>Retrato 14</span><span>033</span></div>
       </div>
-      <div class="card reveal" data-filter="bodas">
-        <div class="frame ar-3-2" data-caption="Bodas — reemplaza con tu foto">
-          <img src="images/DSC12.jpg" alt="Boda 14">
-          <span class="frame-tag">Bodas</span>
-          <span class="frame-stamp">BODA_14</span>
+
+      <div class="card reveal" data-filter="newborn estudio retratos">
+        <div class="frame ar-3-2">
+          <img src="images/DSC40.jpg" alt="Newborn 03">
+          <div class="tags-container">
+            <span class="frame-tag">Newborn</span>
+            <span class="frame-tag">Estudio</span>
+            <span class="frame-tag">Retratos</span>
+          </div>
+          <span class="frame-stamp">Newborn_03</span>
         </div>
-        <div class="card-meta"><span>Boda 14</span><span>028</span></div>
+        <div class="card-meta"><span>Newborn 03</span><span>034</span></div>
       </div>
+
+      <div class="card reveal" data-filter="otros">
+        <div class="frame ar-4-5">
+          <img src="images/DSC42.jpg" alt="Otros 01">
+          <span class="frame-tag">Otros</span>
+          <span class="frame-stamp">OTROS_01</span>
+        </div>
+        <div class="card-meta"><span>Otros 01</span><span>035</span></div>
+      </div>
+
       <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-4-5" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC9.jpg" alt="Retrato 15">
+        <div class="frame ar-4-5">
+          <img src="images/DSC5.jpg" alt="Retrato 15">
           <span class="frame-tag">Retratos</span>
           <span class="frame-stamp">RETRATO_15</span>
         </div>
-        <div class="card-meta"><span>Retrato 15</span><span>029</span></div>
+        <div class="card-meta"><span>Retrato 15</span><span>036</span></div>
       </div>
-      <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-3-2" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC0707.jpg" alt="Retrato 15">
-          <span class="frame-tag">Retratos</span>
-          <span class="frame-stamp">RETRATO_15</span>
+
+      <div class="card reveal" data-filter="otros">
+        <div class="frame ar-3-4">
+          <img src="images/DSC44.jpg" alt="Otros 02">
+          <span class="frame-tag">Otros</span>
+          <span class="frame-stamp">OTROS_02</span>
         </div>
-        <div class="card-meta"><span>Retrato 15</span><span>029</span></div>
+        <div class="card-meta"><span>Otros 02</span><span>037</span></div>
       </div>
-      <div class="card reveal" data-filter="bodas">
-        <div class="frame ar-16-9" data-caption="Bodas — reemplaza con tu foto">
-          <img src="images/DSC16.jpg" alt="Boda 15">
-          <span class="frame-tag">Bodas</span>
-          <span class="frame-stamp">BODA_15</span>
+
+      <div class="card reveal" data-filter="bodas otros sociales retratos">
+        <div class="frame ar-3-2">
+          <img src="images/DSC11A.jpg" alt="Boda 07">
+          <div class="tags-container">
+            <span class="frame-tag">Bodas</span>
+            <span class="frame-tag">Otros</span>
+            <span class="frame-tag">Sociales</span>
+            <span class="frame-tag">Retratos</span>
+          </div>
+          <span class="frame-stamp">BODA_07</span>
         </div>
-        <div class="card-meta"><span>Boda 15</span><span>030</span></div>
+        <div class="card-meta"><span>Boda 07</span><span>038</span></div>
       </div>
-      <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-3-4" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC15.jpg" alt="Retrato 16">
-          <span class="frame-tag">Retratos</span>
+
+      <div class="card reveal" data-filter="xvanos sociales">
+        <div class="frame ar-3-2">
+          <img src="images/DSC12.jpg" alt="XV Años 07">
+          <div class="tags-container">
+            <span class="frame-tag">XV Años</span>
+            <span class="frame-tag">Sociales</span>
+          </div>
+          <span class="frame-stamp">XV_07</span>
+        </div>
+        <div class="card-meta"><span>XV Años 07</span><span>039</span></div>
+      </div>
+
+      <div class="card reveal" data-filter="retratos bodas sociales">
+        <div class="frame ar-4-5">
+          <img src="images/DSC9.jpg" alt="Retrato 16">
+          <div class="tags-container">
+            <span class="frame-tag">Retratos</span>
+            <span class="frame-tag">Bodas</span>
+            <span class="frame-tag">Sociales</span>
+          </div>
           <span class="frame-stamp">RETRATO_16</span>
         </div>
-        <div class="card-meta"><span>Retrato 16</span><span>031</span></div>
+        <div class="card-meta"><span>Retrato 16</span><span>040</span></div>
       </div>
-      <div class="card reveal" data-filter="bodas">
-        <div class="frame ar-4-5" data-caption="Bodas — reemplaza con tu foto">
-          <img src="images/DSC27.jpg" alt="Boda 16">
-          <span class="frame-tag">Bodas</span>
-          <span class="frame-stamp">BODA_16</span>
+
+      <div class="card reveal" data-filter="bodas sociales">
+        <div class="frame ar-3-2">
+          <img src="images/DSC0707.jpg" alt="Boda 08">
+          <div class="tags-container">
+            <span class="frame-tag">Bodas</span>
+            <span class="frame-tag">Sociales</span>
+          </div>
+          <span class="frame-stamp">BODA_08</span>
         </div>
-        <div class="card-meta"><span>Boda 16</span><span>032</span></div>
+        <div class="card-meta"><span>Boda 08</span><span>041</span></div>
       </div>
-      <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-3-4" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC25.jpg" alt="Retrato 17">
-          <span class="frame-tag">Retratos</span>
+
+      <div class="card reveal" data-filter="xvanos sociales">
+        <div class="frame ar-16-9">
+          <img src="images/DSC16.jpg" alt="XV Años 08">
+          <div class="tags-container">
+            <span class="frame-tag">XV Años</span>
+            <span class="frame-tag">Sociales</span>
+          </div>
+          <span class="frame-stamp">XV_08</span>
+        </div>
+        <div class="card-meta"><span>XV Años 08</span><span>042</span></div>
+      </div>
+
+      <div class="card reveal" data-filter="xvanos retratos sociales">
+        <div class="frame ar-3-4">
+          <img src="images/DSC15.jpg" alt="XV Años 09">
+          <div class="tags-container">
+            <span class="frame-tag">XV Años</span>
+            <span class="frame-tag">Retratos</span>
+            <span class="frame-tag">Sociales</span>
+          </div>
+          <span class="frame-stamp">XV_09</span>
+        </div>
+        <div class="card-meta"><span>XV Años 09</span><span>043</span></div>
+      </div>
+
+      <div class="card reveal" data-filter="xvanos retratos sociales">
+        <div class="frame ar-4-5">
+          <img src="images/DSC27.jpg" alt="XV Años 10">
+          <div class="tags-container">
+            <span class="frame-tag">XV Años</span>
+            <span class="frame-tag">Retratos</span>
+            <span class="frame-tag">Sociales</span>
+          </div>
+          <span class="frame-stamp">XV_10</span>
+        </div>
+        <div class="card-meta"><span>XV Años 10</span><span>044</span></div>
+      </div>
+      
+      <div class="card reveal" data-filter="xvanos retratos sociales">
+        <div class="frame ar-3-4">
+          <img src="images/DSC25.jpg" alt="XV Años 11">
+          <div class="tags-container">
+            <span class="frame-tag">XV Años</span>
+            <span class="frame-tag">Retratos</span>
+            <span class="frame-tag">Sociales</span>
+          </div>
+          <span class="frame-stamp">XV_11</span>
+        </div>
+        <div class="card-meta"><span>XV Años 11</span><span>045</span></div>
+      </div>
+
+      <div class="card reveal" data-filter="xvanos retratos sociales">
+        <div class="frame ar-3-2">
+          <img src="images/DSC26.jpg" alt="XV Años 12">
+          <div class="tags-container">
+            <span class="frame-tag">XV Años</span>
+            <span class="frame-tag">Retratos</span>
+            <span class="frame-tag">Sociales</span>
+          </div>
+          <span class="frame-stamp">XV_12</span>
+        </div>
+        <div class="card-meta"><span>XV Años 12</span><span>046</span></div>
+      </div>
+
+      <div class="card reveal" data-filter="newborn retratos estudio">
+        <div class="frame ar-4-5">
+          <img src="images/DSC31.jpg" alt="Maternidad 01">
+          <div class="tags-container">
+            <span class="frame-tag">Maternidad</span>
+            <span class="frame-tag">Retratos</span>
+            <span class="frame-tag">Estudio</span>
+          </div>
+          <span class="frame-stamp">Maternidad_01</span>
+        </div>
+        <div class="card-meta"><span>Maternidad 01</span><span>047</span></div>
+      </div>
+
+      <div class="card reveal" data-filter="newborn retratos estudio">
+        <div class="frame ar-4-5">
+          <img src="images/DSC30.jpg" alt="Newborn 02">
+          <div class="tags-container">
+            <span class="frame-tag">Maternidad</span>
+            <span class="frame-tag">Retratos</span>
+            <span class="frame-tag">Estudio</span>
+          </div>
+          <span class="frame-stamp">Maternidad_02</span>
+        </div>
+        <div class="card-meta"><span>Maternidad 02</span><span>048</span></div>
+      </div>
+
+      <div class="card reveal" data-filter="newborn retratos estudio">
+        <div class="frame ar-4-5">
+          <img src="images/DSC32.jpg" alt="Maternidad 03">
+          <div class="tags-container">
+            <span class="frame-tag">Maternidad</span>
+            <span class="frame-tag">Retratos</span>
+            <span class="frame-tag">Estudio</span>
+          </div>
+          <span class="frame-stamp">Maternidad_03</span>
+        </div>
+        <div class="card-meta"><span>Maternidad 03</span><span>049</span></div>
+      </div>
+
+      <div class="card reveal" data-filter="retratos estudio">
+        <div class="frame ar-3-4">
+          <img src="images/DSC33.jpg" alt="Retrato 17">
+          <div class="tags-container">
+            <span class="frame-tag">Retratos</span>
+            <span class="frame-tag">Estudio</span>
+          </div>
           <span class="frame-stamp">RETRATO_17</span>
         </div>
-        <div class="card-meta"><span>Retrato 17</span><span>033</span></div>
+        <div class="card-meta"><span>Retrato 17</span><span>050</span></div>
       </div>
-      <div class="card reveal" data-filter="bodas">
-        <div class="frame ar-3-2" data-caption="Bodas — reemplaza con tu foto">
-          <img src="images/DSC26.jpg" alt="Boda 17">
-          <span class="frame-tag">Bodas</span>
-          <span class="frame-stamp">BODA_17</span>
-        </div>
-        <div class="card-meta"><span>Boda 17</span><span>034</span></div>
-      </div>
-      <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-4-5" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC31.jpg" alt="Retrato 18">
-          <span class="frame-tag">Retratos</span>
-          <span class="frame-stamp">RETRATO_18</span>
-        </div>
-        <div class="card-meta"><span>Retrato 18</span><span>035</span></div>
-      </div>
-      <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-4-5" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC30.jpg" alt="Retrato 18">
-          <span class="frame-tag">Retratos</span>
-          <span class="frame-stamp">RETRATO_18</span>
-        </div>
-        <div class="card-meta"><span>Retrato 18</span><span>035</span></div>
-      </div>
-      <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-4-5" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC32.jpg" alt="Retrato 18">
-          <span class="frame-tag">Retratos</span>
-          <span class="frame-stamp">RETRATO_18</span>
-        </div>
-        <div class="card-meta"><span>Retrato 18</span><span>035</span></div>
-      </div>
-      <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-3-4" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC33.jpg" alt="Retrato 18">
-          <span class="frame-tag">Retratos</span>
-          <span class="frame-stamp">RETRATO_18</span>
-        </div>
-        <div class="card-meta"><span>Retrato 18</span><span>035</span></div>
-      </div>
-      <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-3-4" data-caption="Retratos — reemplaza con tu foto">
+
+      <div class="card reveal" data-filter="retratos estudio">
+        <div class="frame ar-3-4">
           <img src="images/DSC43.jpg" alt="Retrato 18">
-          <span class="frame-tag">Retratos</span>
+          <div class="tags-container">
+            <span class="frame-tag">Retratos</span>
+            <span class="frame-tag">Estudio</span>
+          </div>
           <span class="frame-stamp">RETRATO_18</span>
         </div>
-        <div class="card-meta"><span>Retrato 18</span><span>035</span></div>
+        <div class="card-meta"><span>Retrato 18</span><span>051</span></div>
       </div>
-      <div class="card reveal" data-filter="retratos">
-        <div class="frame ar-3-2" data-caption="Retratos — reemplaza con tu foto">
-          <img src="images/DSC39.jpg" alt="Retrato 07">
-          <span class="frame-tag">Retratos</span>
-          <span class="frame-stamp">RETRATO_07</span>
+      
+      <div class="card reveal" data-filter="newborn retratos estudio">
+        <div class="frame ar-3-2">
+          <img src="images/DSC39.jpg" alt="Newborn 04">
+          <div class="tags-container">
+            <span class="frame-tag">Newborn</span>
+            <span class="frame-tag">Retratos</span>
+            <span class="frame-tag">Estudio</span>
+          </div>
+          <span class="frame-stamp">Newborn_04</span>
         </div>
-        <div class="card-meta"><span>Retrato 07</span><span>013</span></div>
+        <div class="card-meta"><span>Newborn 04</span><span>052</span></div>
       </div>
     </div>
   </section>

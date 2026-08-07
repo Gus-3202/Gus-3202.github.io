@@ -20,10 +20,6 @@
 
 *{ box-sizing: border-box; }
 html{ scroll-behavior: smooth; }
-@media (prefers-reduced-motion: reduce){
-  html{ scroll-behavior: auto; }
-  *{ animation: none !important; transition: none !important; }
-}
 
 body{
   margin:0;
@@ -485,3 +481,60 @@ footer .socials a:hover{ color: #fff; }
 
 /* Para que el cursor muestre que las fotos del portafolio se pueden clickear */
 .frame img { cursor: pointer; }
+
+/* ============ ANIMACIÓN DE FILTROS ============ */
+@keyframes aparecerSuave {
+  0% { 
+    opacity: 0; 
+    transform: scale(0.98) translateY(15px); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: scale(1) translateY(0); 
+  }
+}
+.card.animar {
+  animation: aparecerSuave 0.8s ease-out forwards !important;
+}
+
+/* ============ ANIMACIONES DE ENTRADA (PAGE LOAD) ============ */
+/* 1. Definimos el movimiento: empieza abajo y transparente, termina en su lugar original */
+@keyframes entradaSuave {
+  0% { 
+    opacity: 0; 
+    transform: translateY(30px); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+/* 2. Clase principal que le pondremos a los elementos */
+.entrar-suave {
+  opacity: 0; /* Comienza invisible */
+  /* La animación dura 0.8s, usa ease-out para frenar al final */
+  animation: entradaSuave 0.8s ease-out both;
+}
+/* 3. Clases de retraso para el efecto cascada */
+.retraso-1 { animation-delay: 0.2s; }
+.retraso-2 { animation-delay: 0.4s; }
+.retraso-3 { animation-delay: 0.6s; }
+.retraso-4 { animation-delay: 0.8s; }
+
+/* ============ CONTENEDOR DE ETIQUETAS ============ */
+.tags-container {
+  position: absolute; /* Hace que el grupo flote sobre la foto */
+  top: 15px;          /* Ajusta estos valores según el margen */
+  left: 15px;
+  display: flex;      /* Activa Flexbox */
+  gap: 8px;           /* Espacio de separación entre etiquetas */
+  flex-wrap: wrap;    /* Si pones muchas etiquetas, las pasa a la siguiente línea */
+  z-index: 10;        /* Asegura que siempre estén por encima de la imagen */
+}
+/* Ajuste preventivo para tus etiquetas individuales */
+.tags-container .frame-tag {
+  position: relative; /* Anula cualquier posición absoluta previa */
+  top: auto;
+  left: auto;
+  margin: 0;          /* Limpia márgenes */
+}
