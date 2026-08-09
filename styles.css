@@ -202,58 +202,56 @@ header.on-dark:not(.scrolled) .nav-links a.active{
 /* ============ HERO RESPONSIVO (MÓVIL) ============ 
 Media query que se activa en pantallas de menos de 768px (móviles y tablets pequeñas) */
 @media screen and (max-width: 768px) {
+  
+  /* Configuración de la sección principal */
   .hero {
-    display: flex !important; /* Asegura que usamos Flexbox en móvil */
-    
-    /* === OPCIÓN A: IMAGEN ARRIBA del texto en móvil === */
-    /* flex-direction: column-reverse; */
-    
-    /* === OPCIÓN B: TEXTO ARRIBA de la imagen (más común) === */
-    flex-direction: column;   /* Mantiene el orden del HTML: Texto y luego Imagen abajo */
-    
-    gap: 30px;                /* Espacio entre el texto y la imagen */
-    text-align: center;       /* Centra el texto en móvil */
-    padding: 120px 0 60px;    /* Ajusta el padding para móvil */
-    align-items: center;      /* Centra los elementos horizontalmente */
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 60px; /* Para dar un poco de aire contra el menú superior */
   }
-  /* Ajustar el contenedor de texto */
-  .hero > .reveal {
-    width: 100%;              /* Asegura ancho completo en móvil */
+  .hero .reveal {
+    display: contents;
   }
-  .hero-actions {
-    justify-content: center;  /* Centra los botones horizontalmente en móvil */
+  /* Primero: La etiqueta pequeña */
+  .hero .eyebrow { 
+    order: 1; 
+    justify-content: center; 
   }
-  /* Centrar el bloque de texto y darle espacio en los bordes */
-  .hero p.lead {
+  /* Segundo: El título principal */
+  .hero h1 { 
+    order: 2; 
+    margin-bottom: 24px; /* Espacio antes de la foto */
+  }
+  /* Tercero: LA FOTO */
+  .hero .hero-frame { 
+    order: 3; 
+    width: 100%; 
+    max-width: 380px; 
+    margin: 0 auto 24px auto; /* Centrada y con espacio abajo */
+  }
+  /* Cuarto: El párrafo */
+  .hero p.lead { 
+    order: 4; 
     margin-left: auto;
     margin-right: auto;
     padding-left: 20px;
     padding-right: 20px;
   }
-  .hero .eyebrow {
+  /* Quinto: Los botones */
+  .hero .hero-actions { 
+    order: 5; 
     justify-content: center;
+    margin-top: 10px;
   }
-  /* Ajustar el wrapper de la imagen (.hero-frame) */
-  .hero-frame {
-    width: 100%;              /* Wrapper ocupa ancho completo */
-    max-width: 380px;         /* Limita el ancho máximo */
-    margin: 0 auto;           /* Centra el wrapper */
-    order: 1;                 /* Asegura que la imagen vaya después del texto en la columna */
+  /* Sexto: Texto de la ubicación */
+  .hero .reveal > p:last-child { 
+    order: 6; 
   }
-  
-  /* ============ ETIQUETAS MENOS INVASIVAS EN MÓVIL ============ */
-  .tags-container {
-    top: 10px;       /* Las acercamos más al borde de la foto */
-    left: 10px;
-    gap: 4px;        /* Reducimos la separación entre etiquetas */
-  }
-
-  /* ============ OCULTAR ETIQUETAS EN MÓVIL ============ */
-  .tags-container {
-    display: none !important;
-  }
-  /* Para ocultar las etiquetas extra en celular */
-  .tags-container .frame-tag:not(:first-child) {
+  /* Ocultar etiquetas en celular */
+  .tags-container,
+  .frame-tag {
     display: none !important;
   }
 }
@@ -529,7 +527,7 @@ footer .socials a:hover{ color: #fff; }
 }
 
 /* ============ ANIMACIONES DE ENTRADA (PAGE LOAD) ============ */
-/* 1. Definimos el movimiento: empieza abajo y transparente, termina en su lugar original */
+/* Definimos el movimiento: empieza abajo y transparente, termina en su lugar original */
 @keyframes entradaSuave {
   0% { 
     opacity: 0; 
@@ -540,13 +538,13 @@ footer .socials a:hover{ color: #fff; }
     transform: translateY(0); 
   }
 }
-/* 2. Clase principal que le pondremos a los elementos */
+/* Clase principal que le pondremos a los elementos */
 .entrar-suave {
   opacity: 0; /* Comienza invisible */
   /* La animación dura 0.8s, usa ease-out para frenar al final */
   animation: entradaSuave 0.8s ease-out both;
 }
-/* 3. Clases de retraso para el efecto cascada */
+/* Clases de retraso para el efecto cascada */
 .retraso-1 { animation-delay: 0.2s; }
 .retraso-2 { animation-delay: 0.4s; }
 .retraso-3 { animation-delay: 0.6s; }
