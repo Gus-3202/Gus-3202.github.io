@@ -567,3 +567,16 @@ footer .socials a:hover{ color: #fff; }
   left: auto;
   margin: 0;          /* Limpia márgenes */
 }
+
+/* ============ LOGROS / RECONOCIMIENTOS ============ */
+.award-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.award-card{
+  border: 1px solid var(--line); border-radius: 4px; padding: 28px;
+  background: var(--paper-soft);
+  transition: border-color .2s ease, transform .2s ease;
+}
+.award-card:hover{ border-color: var(--accent); transform: translateY(-3px); }
+.award-year{ font-family: var(--font-mono); font-size: 12px; letter-spacing:.08em; color: var(--accent); }
+.award-card h4{ font-family: var(--font-display); font-size: 20px; margin: 8px 0 10px; }
+.award-card p{ color: var(--ink-muted); font-size: 14.5px; margin: 0; }
+@media (max-width: 900px){ .award-grid{ grid-template-columns: 1fr; } }
